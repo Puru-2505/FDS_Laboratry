@@ -1,0 +1,22 @@
+bal=0
+n=100
+for i in range(n):
+  x=input("Enter operation and value in same line ")
+  y=[]
+  y=x.split()
+  operation=y[0]
+  temp=y[1]
+  value=int(temp)
+  if (operation=='d'):
+    bal=bal+value
+  elif (operation=='w'):
+    if(bal>value):
+      bal=bal-value
+  else:
+    print("Insufficient balance")
+  z=input("Do you want to continue with next transaction ")
+  if (z=='yes' or z== 'y'):
+    pass
+  elif(z=='no' or z=='n'):
+    break
+print(f"Balance is {bal}")
